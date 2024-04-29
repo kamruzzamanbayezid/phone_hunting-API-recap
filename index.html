@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Phone Hunter</title>
+
+      <!-- Poppins || google font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+      <!-- DaisyUI & tailwind CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="">
+      <header class="bg-[#0d6efd0d]">
+            <div class="py-10 px-4 lg:px-0 flex items-center justify-between  container mx-auto">
+                  <h2 class="text-[#403F3F] text-2xl font-bold">Hot Gadgets</h2>
+                  <button class="px-8 py-4 bg-[#0D6EFD] text-white font-bold text-xl rounded-lg">Sign Up</button>
+            </div>
+            <div class="text-center pb-10">
+                  <h2 class="text-6xl font-bold mb-5">Apple Iphone 13 Pro Max</h2>
+                  <p class="text-[#706F6F] text-lg mb-6">There are many variations of passages of Lorem Ipsum available,
+                        but the majority <br> have suffered alteration in some form, by injected humou.</p>
+                  <button class="px-8 py-4 bg-[#0D6EFD] text-white font-bold text-xl rounded-lg">Buy Now</button>
+            </div>
+      </header>
+
+      <main class="container mx-auto my-20">
+            <h3 class="text-center font-semibold text-4xl">Search your phone</h3>
+            <div class="flex w-3/4 mx-auto mt-6">
+                  <input class="rounded-l-lg border h-16 pl-5 w-full" placeholder="Search your phone" type="text"
+                        id="search-input">
+                  <button onclick="handleSearch()"
+                        class="px-8 py-3 bg-[#0D6EFD] text-white font-bold text-xl rounded-r-lg">Search</button>
+            </div>
+
+            <!-- Modal || Phone details -->
+            <dialog id="my_modal_5" class="modal">
+                  
+            </dialog>
+
+            <!-- loading spinner -->
+            <!-- <div class="loading-spinner">
+                  <span className="loading loading-bars loading-lg"></span>
+            </div> -->
+
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5 p-4 lg:p-0">
+                  <!-- All phone are append here -->
+            </div>
+
+            <!-- if no phone found -->
+            <div id="no-found-message" class="hidden mt-4 text-5xl">
+                  <h3 class="text-warning text-center">No Phone Found. Please try a new search</h3>
+            </div>
+
+            <div class="flex justify-center items-center mt-10">
+                  <button id="showAllBtn" onclick="showAllPhone()"
+                        class="hidden px-8 py-3 bg-[#0D6EFD] text-white font-bold text-xl rounded-lg">Show All</button>
+            </div>
+      </main>
+
+      <!-- js links -->
+      <script src="./js/hunting-phone.js"></script>
+</body>
+
+</html>
